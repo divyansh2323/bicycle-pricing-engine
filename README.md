@@ -24,8 +24,7 @@ This workspace contains a full-stack bicycle pricing engine with:
    cd backend
 mvn clean install
 mvn spring-boot:run
-
-   ```
+ ```
 
 ## Frontend Setup
 
