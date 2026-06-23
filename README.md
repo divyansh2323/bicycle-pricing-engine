@@ -19,10 +19,11 @@ This workspace contains a full-stack bicycle pricing engine with:
    CREATE DATABASE bicycle_pricing;
    ```
 2. Update `backend/src/main/resources/application.properties` with your MySQL credentials.
-3. Build and run:  cd backend
+3. Build and run:  
+   ```bash
+   cd backend
 mvn clean install
 mvn spring-boot:run
-   ```bash
 
    ```
 
