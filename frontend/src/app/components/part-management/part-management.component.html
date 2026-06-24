@@ -1,2 +1,44 @@
 <h2>Part Management</h2>
-<p>Manage bicycle parts here.</p>
+
+<div>
+  <input
+    type="text"
+    placeholder="Part Name"
+    [(ngModel)]="newPart.name">
+
+  <input
+    type="text"
+    placeholder="Category"
+    [(ngModel)]="newPart.category">
+
+  <input
+    type="number"
+    placeholder="Price"
+    [(ngModel)]="newPart.price">
+
+  <button (click)="addPart()">Add Part</button>
+</div>
+
+<br>
+
+<table border="1" cellpadding="5">
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Category</th>
+    <th>Price</th>
+    <th>Action</th>
+  </tr>
+
+  <tr *ngFor="let part of parts">
+    <td>{{part.id}}</td>
+    <td>{{part.name}}</td>
+    <td>{{part.category}}</td>
+    <td>{{part.price}}</td>
+    <td>
+      <button (click)="deletePart(part.id)">
+        Delete
+      </button>
+    </td>
+  </tr>
+</table>
